@@ -107,6 +107,7 @@
     emit("add-mod", mod);
     showResultPanel.value = false;
     searchText.value = "";
+    result.value = [];
   };
 </script>
 
