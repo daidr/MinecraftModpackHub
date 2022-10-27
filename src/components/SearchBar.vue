@@ -155,7 +155,7 @@
                   <div class="name">{{ strof(mod.name, 30) }}</div>
                   <div v-if="mod.latestGameVersions.length > 0" class="version">
                     <template
-                      v-for="gameVersion of mod.latestGameVersions.slice(5)"
+                      v-for="gameVersion of mod.latestGameVersions.slice(0, 5)"
                     >
                       {{ gameVersion.name }}&nbsp;
                     </template>
