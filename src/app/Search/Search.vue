@@ -107,7 +107,10 @@
         >
           <MCFrame class="modpack-item">
             <div class="top">
-              <img :src="modpack.logoUrl" class="image" />
+              <img
+                :src="modpack.logoUrl || './images/chest.png'"
+                class="image"
+              />
               <div class="detail">
                 <div class="name">{{ modpack.name }}</div>
                 <div v-if="modpack.authors.length > 0" class="author">
