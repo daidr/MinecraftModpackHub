@@ -23,7 +23,8 @@
     "modlist": {
       "added": "成功添加模组",
       "removed": "成功移除模组"
-    }
+    },
+    "searchbtn": "搜索包含以上模组的整合包"
   },
   "header": {
     "toolbar": {

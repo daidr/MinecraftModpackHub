@@ -23,7 +23,8 @@
     "modlist": {
       "added": "Mod added",
       "removed": "Mod removed"
-    }
+    },
+    "searchbtn": "Search for modpacks covered above mods"
   },
   "header": {
     "toolbar": {
