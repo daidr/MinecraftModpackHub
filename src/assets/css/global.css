@@ -11,8 +11,12 @@ body {
   font-family: PingFang SC, HarmonyOS_Regular, Helvetica Neue, Microsoft YaHei, sans-serif !important;
 }
 
+body {
+  @apply overflow-auto;
+}
+
 #app {
-  @apply h-100vh w-100vw;
+  @apply w-100vw;
   @apply flex justify-center items-center;
 }
 
