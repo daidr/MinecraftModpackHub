@@ -43,6 +43,10 @@
   "search": {
     "no-match-modpack": "No matched modpack found",
     "latest-game-version": "Latest Game Version: ",
-    "unknown": "Unknown"
+    "unknown": "Unknown",
+    "mod-count": "Mods Count: ",
+    "download-count": "Downloads: ",
+    "create-time": "Created: ",
+    "update-time": "Modified: "
   }
 }

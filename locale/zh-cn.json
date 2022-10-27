@@ -43,6 +43,10 @@
   "search": {
     "no-match-modpack": "未找到符合要求的整合包",
     "latest-game-version": "最新游戏版本：",
-    "unknown": "未知"
+    "unknown": "未知",
+    "mod-count": "模组数量：",
+    "download-count": "下载量：",
+    "create-time": "创建时间：",
+    "update-time": "更新时间："
   }
 }
