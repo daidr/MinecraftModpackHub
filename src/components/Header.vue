@@ -27,6 +27,7 @@
     @apply select-none;
     @apply sticky top-3 md:top-5;
     @apply flex gap-x-2;
+    @apply flex-shrink-0;
 
     .main {
       @apply flex-grow;
