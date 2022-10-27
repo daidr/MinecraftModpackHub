@@ -101,7 +101,7 @@
 
     .mod-item {
       &:deep(.mcframe__main) {
-        @apply flex p-1 relative;
+        @apply flex p-1 pr-3 relative;
       }
 
       .image {
