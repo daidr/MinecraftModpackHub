@@ -39,5 +39,10 @@
       "notAvailableModpacks": "Not Available Modpacks",
       "notEmptyModpacks": "Not Empty Modpacks"
     }
+  },
+  "search": {
+    "no-match-modpack": "No matched modpack found",
+    "latest-game-version": "Latest Game Version: ",
+    "unknown": "Unknown"
   }
 }

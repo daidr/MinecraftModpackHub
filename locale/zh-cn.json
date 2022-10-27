@@ -8,7 +8,7 @@
     "unknown": "未知",
     "home": "首页",
     "status": "状态",
-    "search": "Result"
+    "search": "搜索结果"
   },
   "home": {
     "protips": {
@@ -39,5 +39,10 @@
       "notAvailableModpacks": "不可用整合包",
       "notEmptyModpacks": "非空整合包"
     }
+  },
+  "search": {
+    "no-match-modpack": "未找到符合要求的整合包",
+    "latest-game-version": "最新游戏版本：",
+    "unknown": "未知"
   }
 }
