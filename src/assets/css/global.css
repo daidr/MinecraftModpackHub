@@ -3,7 +3,7 @@ body {
   margin: 0;
   overflow-y: hidden;
   font-family: IPix, PingFang SC, HarmonyOS_Regular, Helvetica Neue, Microsoft YaHei, sans-serif !important;
-  @apply text-primary bg-primary-extralight;
+  @apply text-primary bg-primary/5;
   overflow: hidden;
 }
 
