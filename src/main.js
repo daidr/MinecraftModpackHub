@@ -45,6 +45,12 @@ const i18n = createI18n({
 app.use(i18n);
 
 import { VueReCaptcha } from 'vue-recaptcha-v3'
-app.use(VueReCaptcha, { siteKey: '6LdQjSYiAAAAAG9rVoUJxVajIae3snOj9J1f6iOd' })
+app.use(VueReCaptcha, {
+    siteKey: '6LdQjSYiAAAAAG9rVoUJxVajIae3snOj9J1f6iOd',
+    loaderOptions: {
+        useRecaptchaNet: true,
+        autoHideBadge: true,
+    }
+})
 
 app.mount('#app');
