@@ -67,14 +67,13 @@
       <div class="icon" @click="onModRemoveBtnClick(mod.id)">
         <Icon icon="pixelarticons:close"></Icon>
       </div>
-      <div class="image">
-        <img
-          :src="
-            mod.logoUrl ||
-            `${ENV_BASE_URL}/v1/focessapi/minecraft/mod/logo/${mod.id}`
-          "
-        />
-      </div>
+      <img
+        class="image"
+        :src="
+          mod.logoUrl ||
+          `${ENV_BASE_URL}/v1/focessapi/minecraft/mod/logo/${mod.id}`
+        "
+      />
       <div class="detail">
         <div class="name">{{ mod.name }}</div>
         <div v-if="mod.authors.length !== 0" class="author">
@@ -107,6 +106,7 @@
 
       .image {
         @apply w-90px h-90px flex-shrink-0 mr-2;
+        @apply object-cover;
       }
 
       .detail {
