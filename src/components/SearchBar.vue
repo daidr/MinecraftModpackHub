@@ -20,7 +20,7 @@
   };
 
   // 防抖函数
-  const debounce = (fn, delay = 1000) => {
+  const debounce = (fn, delay = 500) => {
     let timer = null;
     return function () {
       if (timer) {
@@ -106,6 +106,7 @@
   const onModItemClick = (mod) => {
     emit("add-mod", mod);
     showResultPanel.value = false;
+    searchText.value = "";
   };
 </script>
 
