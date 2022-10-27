@@ -1,0 +1,61 @@
+html,
+body {
+  margin: 0;
+  overflow-y: hidden;
+  font-family: IPix, PingFang SC, HarmonyOS_Regular, Helvetica Neue, Microsoft YaHei, sans-serif !important;
+  @apply text-primary bg-primary-extralight;
+  overflow: hidden;
+}
+
+.font-nomc {
+  font-family: PingFang SC, HarmonyOS_Regular, Helvetica Neue, Microsoft YaHei, sans-serif !important;
+}
+
+#app {
+  @apply h-100vh w-100vw;
+  @apply flex justify-center items-center;
+}
+
+* {
+  outline: none !important;
+  @apply box-border;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  @apply bg-primary;
+  color: #fff;
+}
+
+input {
+  @apply text-17px leading-0;
+  @apply border-1 border-primary border-opacity-60;
+}
+
+input::placeholder {
+  @apply text-primary/70;
+}
+
+.header-link {
+  @apply underline underline-transparent underline-dashed;
+  @apply transition;
+  @apply text-sm md:text-lg;
+}
+
+.header-link:hover {
+  @apply underline-current text-[#3b904e];
+}
+
+.grecaptcha-badge {
+  display: none !important;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

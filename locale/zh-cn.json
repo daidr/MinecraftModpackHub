@@ -1,0 +1,41 @@
+{
+  "locate": {
+    "en": "English",
+    "zh-cn": "简体中文"
+  },
+  "title": {
+    "main": "MC模组聚合",
+    "unknown": "未知",
+    "home": "首页",
+    "status": "状态"
+  },
+  "home": {
+    "protips": {
+      "title": "根据模组检索模组包",
+      "desc": "所有信息来源于Curseforge API。 本网站不隶属于Curseforge或Minecraft。"
+    },
+    "searchbar": {
+      "placeholder": "输入关键词以搜索 mods",
+      "no-match": "无匹配模组",
+      "createby": "由 {0} 创建"
+    },
+    "modlist": {
+      "added": "成功添加模组",
+      "removed": "成功移除模组"
+    }
+  },
+  "header": {
+    "toolbar": {
+      "status": "状态",
+      "home": "首页"
+    }
+  },
+  "status": {
+    "title": {
+      "availableMods": "可用模组数量",
+      "availableModpacks": "可用整合包数量",
+      "notAvailableModpacks": "不可用整合包",
+      "notEmptyModpacks": "非空整合包"
+    }
+  }
+}

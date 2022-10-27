@@ -1,0 +1,41 @@
+{
+  "locate": {
+    "en": "English",
+    "zh-cn": "简体中文"
+  },
+  "title": {
+    "main": "Modpack Hub",
+    "unknown": "Unknown",
+    "home": "Home",
+    "status": "Status"
+  },
+  "home": {
+    "protips": {
+      "title": "Search modpacks by mods",
+      "desc": "All information are provided by CurseForge API. This website is not affiliated with CurseForge or Minecraft."
+    },
+    "searchbar": {
+      "placeholder": "Enter keywords to search mods",
+      "no-match": "No matched mods",
+      "createby": "Create by {0}"
+    },
+    "modlist": {
+      "added": "Mod added",
+      "removed": "Mod removed"
+    }
+  },
+  "header": {
+    "toolbar": {
+      "status": "Status",
+      "home": "Home"
+    }
+  },
+  "status": {
+    "title": {
+      "availableMods": "Available Mods",
+      "availableModpacks": "Available Modpacks",
+      "notAvailableModpacks": "Not Available Modpacks",
+      "notEmptyModpacks": "Not Empty Modpacks"
+    }
+  }
+}
