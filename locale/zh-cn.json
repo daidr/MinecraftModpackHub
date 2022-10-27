@@ -7,7 +7,8 @@
     "main": "MC模组聚合",
     "unknown": "未知",
     "home": "首页",
-    "status": "状态"
+    "status": "状态",
+    "search": "Result"
   },
   "home": {
     "protips": {
