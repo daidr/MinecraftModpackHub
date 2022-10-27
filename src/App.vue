@@ -51,7 +51,7 @@
       @apply flex flex-col gap-y-2;
 
       &.disabled {
-        @apply pointer-events-none;
+        @apply pointer-events-none opacity-0;
       }
     }
   }
