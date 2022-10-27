@@ -47,6 +47,7 @@
     (val) => {
       if (val != "") {
         searchHandler(val);
+        tryShowResultPanel();
       } else {
         showResultPanel.value = false;
       }
