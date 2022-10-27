@@ -1,4 +1,5 @@
 <script setup>
+  import MCButton from "@/components/MCButton.vue";
   import MCFrame from "@/components/MCFrame.vue";
   import { useMessage } from "@/components/Message";
   import SearchBar from "@/components/SearchBar.vue";
@@ -7,7 +8,7 @@
   import { Icon } from "@iconify/vue";
   import { onMounted, reactive, ref } from "vue";
   import { useI18n } from "vue-i18n";
-  import { RouterLink } from "vue-router";
+  import { RouterLink, useRouter } from "vue-router";
 
   const pageStore = usePageStore();
 
@@ -20,6 +21,8 @@
       return str;
     }
   };
+
+  const router = useRouter();
 
   const { t } = useI18n();
 
@@ -48,6 +51,18 @@
       modList.splice(_modIndex, 1);
       success(t("home.modlist.removed"));
     }
+  };
+
+  const onSearchBtnClick = () => {
+    // get mod list
+    const modIdList = modList.map((item) => item.id);
+    const modIdString = modIdList.join(",");
+    router.push({
+      name: "search",
+      params: {
+        ids: modIdString,
+      },
+    });
   };
 </script>
 
@@ -81,6 +96,11 @@
         </div>
       </div>
     </MCFrame>
+  </div>
+  <div class="btn-wrapper">
+    <MCButton :disabled="modList.length == 0" @click="onSearchBtnClick">{{
+      t("home.searchbtn")
+    }}</MCButton>
   </div>
 </template>
 
@@ -121,6 +141,14 @@
           @apply bg-red-700 text-white;
         }
       }
+    }
+  }
+
+  .btn-wrapper {
+    @apply flex justify-center mt-4;
+
+    &:deep(.mcbutton__main) {
+      @apply py-1 px-2;
     }
   }
 </style>
