@@ -71,7 +71,7 @@
 
     await recaptchaLoaded();
 
-    const token = await executeRecaptcha("mod_overview");
+    const token = await executeRecaptcha("search_modpacks");
 
     const { data: _ret } = await axios.post(
       ENV_BASE_URL + "/v1/focessapi/minecraft/modpack/depend",
