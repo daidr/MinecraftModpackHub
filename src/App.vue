@@ -42,7 +42,7 @@
   }
 
   .main-wrapper {
-    @apply max-w-1300px w-full h-100vh;
+    @apply max-w-1300px w-full min-h-100vh;
     @apply px-3 md:px-5;
     @apply flex flex-col;
 

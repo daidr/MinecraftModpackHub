@@ -25,9 +25,20 @@
   .header {
     @apply h-40px md:h-50px text-base md:text-lg;
     @apply select-none;
-    @apply sticky top-3 md:top-5;
+    @apply sticky top-3 md:top-5 z-20;
     @apply flex gap-x-2;
     @apply flex-shrink-0;
+
+    &::before {
+      content: "";
+      @apply absolute -top-3 md:-top-5 left-0 right-0 bottom-0;
+      background-image: linear-gradient(
+        to bottom,
+        #ebebeb,
+        #ebebeb 30%,
+        transparent
+      );
+    }
 
     .main {
       @apply flex-grow;

@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  @apply overflow-auto;
+  @apply overflow-auto h-100vh;
 }
 
 #app {
