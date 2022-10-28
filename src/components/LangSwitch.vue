@@ -14,6 +14,6 @@
 
 <style lang="scss" scoped>
   select {
-    @apply bg-transparent text-primary;
+    @apply bg-transparent text-primary h-full;
   }
 </style>
