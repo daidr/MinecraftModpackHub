@@ -16,7 +16,7 @@ body {
 }
 
 #app {
-  @apply w-100vw;
+  @apply w-full;
   @apply flex justify-center items-center;
 }
 
