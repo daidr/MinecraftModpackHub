@@ -195,6 +195,7 @@
           .label {
             @apply text-gray-700;
             @apply select-none;
+            @apply whitespace-nowrap;
           }
           .value {
             @apply text-gray-500;
