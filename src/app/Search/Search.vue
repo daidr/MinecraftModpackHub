@@ -198,6 +198,7 @@
           }
           .value {
             @apply text-gray-500;
+            @apply whitespace-nowrap overflow-hidden text-ellipsis;
           }
         }
       }
