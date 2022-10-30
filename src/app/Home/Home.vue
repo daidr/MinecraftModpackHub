@@ -50,6 +50,7 @@
     const _modIndex = modList.findIndex((item) => item.id === modid);
     if (_modIndex !== -1) {
       modList.splice(_modIndex, 1);
+      localStorage.setItem("modList", JSON.stringify(modList));
       success(t("home.modlist.removed"));
     }
   };
