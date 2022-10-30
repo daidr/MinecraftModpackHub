@@ -85,6 +85,10 @@
 
     modpackList.value = _ret;
   };
+
+  const onImageError = (modpack) => {
+    modpack.logoUrl = "/images/chest.png"
+  }
 </script>
 
 <template>
@@ -95,7 +99,7 @@
       }}</RouterLink>
     </Teleport>
     <div class="modpack-wrapper">
-      <div v-if="modpackList.length == 0" class="no-match-modpack">
+      <div v-if="modpackList.length === 0" class="no-match-modpack">
         {{ t("search.no-match-modpack") }}
       </div>
       <div v-else class="modpack-list">
@@ -108,7 +112,8 @@
           <MCFrame class="modpack-item">
             <div class="top">
               <img
-                :src="modpack.logoUrl || './images/chest.png'"
+                :src="modpack.logoUrl || `${ENV_BASE_URL}/v1/focessapi/minecraft/mod/logo/${modpack.id}`"
+                @error="onImageError(modpack)"
                 class="image"
               />
               <div class="detail">

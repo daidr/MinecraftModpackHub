@@ -1,8 +1,7 @@
 <script setup>
   import { useI18n } from "vue-i18n";
-  import { Icon } from "@iconify/vue";
   import MCFrame from "./MCFrame.vue";
-  import { ref, watch } from "vue";
+  import {ref, watch} from "vue";
   import LoadingIcon from "./LoadingIcon.vue";
   import axios from "axios";
   import { useReCaptcha } from "vue-recaptcha-v3";
@@ -10,6 +9,14 @@
   const { executeRecaptcha, recaptchaLoaded } = useReCaptcha();
 
   const { t } = useI18n();
+
+
+  const props = defineProps({
+    modIdList: {
+      type: Array,
+      required: true,
+    },
+  })
 
   const strof = (str, maxlen) => {
     if (str.length > maxlen) {
@@ -45,7 +52,7 @@
   watch(
     () => searchText.value,
     (val) => {
-      if (val != "") {
+      if (val !== "") {
         searchHandler(val);
         tryShowResultPanel();
       } else {
@@ -84,8 +91,7 @@
           cancelToken: CancelToken.token,
         }
       );
-
-      result.value = _ret;
+      result.value = _ret.filter(item => props.modIdList.indexOf(item.id) === -1);
     } catch (error) {
       console.log(error);
     }
@@ -97,18 +103,14 @@
   };
 
   const tryHideResultPanel = () => {
-    if (!mouseInPanel.value) {
-      showResultPanel.value = false;
-    }
+    showResultPanel.value = false;
   };
 
   const emit = defineEmits(["add-mod"]);
 
   const onModItemClick = (mod) => {
     emit("add-mod", mod);
-    showResultPanel.value = false;
-    searchText.value = "";
-    result.value = [];
+    result.value = result.value.filter((item) => item.id !== mod.id);
   };
 </script>
 
@@ -133,7 +135,7 @@
       >
         <div v-if="isLoading" class="loading"><LoadingIcon></LoadingIcon></div>
         <template v-else>
-          <div v-if="result.length == 0" class="no-match">
+          <div v-if="result.length === 0" class="no-match">
             {{ t("home.searchbar.no-match") }}
           </div>
           <div v-else class="mod-list">
