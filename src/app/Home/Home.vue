@@ -6,7 +6,7 @@
   import { usePageStore } from "@/store/page";
   import { ENV_BASE_URL } from "@/utils/env";
   import { Icon } from "@iconify/vue";
-  import { onMounted, reactive, ref } from "vue";
+  import {computed, onMounted, reactive} from "vue";
   import { useI18n } from "vue-i18n";
   import { RouterLink, useRouter } from "vue-router";
 
@@ -34,6 +34,10 @@
   });
 
   const modList = reactive(JSON.parse(localStorage.getItem("modList")) || []);
+
+  const modIdList = computed(() => {
+    return modList.map((item) => item.id);
+  });
 
   const onModAdded = (mod) => {
     // 检查是否有 id 重复的 mod
@@ -78,7 +82,7 @@
     <p class="title">{{ t("home.protips.title") }}</p>
     <p class="desc">{{ t("home.protips.desc") }}</p>
   </MCFrame>
-  <SearchBar @add-mod="onModAdded"></SearchBar>
+  <SearchBar @add-mod="onModAdded" :mod-id-list="modIdList"></SearchBar>
   <div class="mod-list">
     <MCFrame v-for="mod of modList" :key="mod.id" class="mod-item">
       <div class="icon" @click="onModRemoveBtnClick(mod.id)">
@@ -100,7 +104,7 @@
     </MCFrame>
   </div>
   <div class="btn-wrapper">
-    <MCButton :disabled="modList.length == 0" @click="onSearchBtnClick">{{
+    <MCButton :disabled="modList.length === 0" @click="onSearchBtnClick">{{
       t("home.searchbtn")
     }}</MCButton>
   </div>
