@@ -33,7 +33,7 @@
     // pageStore.setPageLoadingState(false)
   });
 
-  const modList = reactive([]);
+  const modList = reactive(JSON.parse(localStorage.getItem("modList")) || []);
 
   const onModAdded = (mod) => {
     // 检查是否有 id 重复的 mod
@@ -41,6 +41,7 @@
     if (!_mod) {
       // 如果没有，就把 mod 添加到列表
       modList.push(mod);
+      localStorage.setItem("modList", JSON.stringify(modList));
       success(t("home.modlist.added"));
     }
   };
@@ -49,6 +50,7 @@
     const _modIndex = modList.findIndex((item) => item.id === modid);
     if (_modIndex !== -1) {
       modList.splice(_modIndex, 1);
+      localStorage.setItem("modList", JSON.stringify(modList));
       success(t("home.modlist.removed"));
     }
   };
