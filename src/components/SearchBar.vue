@@ -7,6 +7,7 @@
   import axios from "axios";
   import { useReCaptcha } from "vue-recaptcha-v3";
   import { ENV_BASE_URL } from "@/utils/env";
+import { getMediaMirrorURL } from "@/utils/_";
   const { executeRecaptcha, recaptchaLoaded } = useReCaptcha();
 
   const { t } = useI18n();
@@ -147,7 +148,7 @@
                 <div class="image">
                   <img
                     :src="
-                      mod.logoUrl ||
+                      getMediaMirrorURL(mod.logoUrl) ||
                       `${ENV_BASE_URL}/v1/focessapi/minecraft/mod/logo/${mod.id}`
                     "
                   />

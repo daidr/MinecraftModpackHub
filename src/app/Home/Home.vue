@@ -5,6 +5,7 @@
   import SearchBar from "@/components/SearchBar.vue";
   import { usePageStore } from "@/store/page";
   import { ENV_BASE_URL } from "@/utils/env";
+import { getMediaMirrorURL } from "@/utils/_";
   import { Icon } from "@iconify/vue";
   import { onMounted, reactive, ref } from "vue";
   import { useI18n } from "vue-i18n";
@@ -87,7 +88,7 @@
       <img
         class="image"
         :src="
-          mod.logoUrl ||
+          getMediaMirrorURL(mod.logoUrl) ||
           `${ENV_BASE_URL}/v1/focessapi/minecraft/mod/logo/${mod.id}`
         "
       />

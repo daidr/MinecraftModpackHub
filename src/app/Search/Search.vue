@@ -7,6 +7,7 @@
   import { useReCaptcha } from "vue-recaptcha-v3";
   import { RouterLink, useRoute, useRouter } from "vue-router";
   import axios from "axios";
+import { getMediaMirrorURL } from "@/utils/_";
 
   const { executeRecaptcha, recaptchaLoaded } = useReCaptcha();
 
@@ -108,7 +109,7 @@
           <MCFrame class="modpack-item">
             <div class="top">
               <img
-                :src="modpack.logoUrl || './images/chest.png'"
+                :src="getMediaMirrorURL(modpack.logoUrl) || './images/chest.png'"
                 class="image"
               />
               <div class="detail">
